@@ -1,0 +1,228 @@
+:root {
+  --primary: #43c986;
+  --bg: #010101;
+  --wht: #fafffd;
+  --silver: #bbe3d6;
+}
+
+/* active button take Item*/
+.take.activeTake {
+  display: grid;
+  position: relative;
+  /* background-color: var(--primary); */
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* active button receive Item*/
+.receive.activeReceive {
+  display: grid;
+  position: relative;
+  /* background-color: var(--primary); */
+  width: 100%;
+  /* margin-bottom: rem; */
+}
+
+/* active button add Item*/
+.add.activeAdd {
+  display: grid;
+  position: relative;
+  /* background-color: var(--primary); */
+  width: 100%;
+  /* margin-bottom: 2rem; */
+}
+
+.cont-table.activeCont {
+  margin-top: 5rem;
+}
+
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin-top: 4rem;
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav {
+  margin-bottom: 2rem;
+}
+
+.nav a {
+  margin: 1rem;
+  text-decoration: none;
+  background-color: var(--primary);
+  color: var(--wht);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.nav a:hover {
+  box-shadow: 2px 2px 10px rgba(14, 65, 49, 0.8);
+}
+
+.nav a:active {
+  transform: scale(1.2);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.table {
+  position: relative;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tablePopUp {
+  position: relative;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  table-layout: fixed;
+  /* Ensures thead and tbody have the same width */
+}
+
+thead {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  width: 100%;
+}
+
+thead th {
+  padding: 12px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+tbody td {
+  padding: 12px;
+  text-align: left;
+}
+
+/* form take start ============================================== */
+.take {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2rem;
+  display: none;
+}
+
+.take button {
+  width: 80%;
+}
+
+.take button:hover {
+  width: 80%;
+  box-shadow: 2px 2px 10px rgba(150, 150, 150, 0.8);
+  transform: scale(1.05);
+  background-color: #43c986;
+}
+
+
+.inputTotalTakeArt {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  height: 24px;
+}
+
+.inputTotalTakeArt:hover {
+  background-color: #f1f1f1;
+}
+
+/* form take end ============================================== */
+
+/* form receive start =========================================*/
+.receive {
+  position: relative;
+  /* background-color: var(--primary); */
+  width: 100%;
+  margin-bottom: 2rem;
+  display: none;
+}
+
+.receive button {
+  width: 80%;
+}
+
+.receive button:hover {
+  width: 80%;
+  box-shadow: 2px 2px 10px rgba(150, 150, 150, 0.8);
+  transform: scale(1.05);
+  background-color: #43c986;
+}
+
+.inputTotalReceive {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  height: 24px;
+}
+
+.inputTotalReceive:hover {
+  background-color: #f1f1f1;
+}
+
+/* form receive end =========================================*/
+
+.add {
+  position: relative;
+  /* background-color: var(--primary); */
+  width: 100%;
+  margin-bottom: 2rem;
+  display: none;
+}
+
+.add button {
+  width: 80%;
+}
+
+.add button:hover {
+  width: 80%;
+  box-shadow: 2px 2px 10px rgba(150, 150, 150, 0.8);
+  transform: scale(1.05);
+  background-color: #43c986;
+}
+
+.form .add #bAdd {
+  width: 100%;
+}
+
+.form-button {
+  background-color: var(--primary);
+  color: var(--wht);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  /* Change from margin-bottom to margin-top */
+  border-radius: 5px;
+}
+
+.form-button:hover {
+  background-color: darken(var(--primary), 10%);
+}
+
+.form-button:active {
+  transform: scale(1.1);
+}

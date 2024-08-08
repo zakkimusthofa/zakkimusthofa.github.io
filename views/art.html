@@ -1,0 +1,171 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="/public/css/art&atk.css">
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>halaman utama</title>
+  <link rel="stylesheet" href="/public/css/main.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a class="title">Item Informations Kalbe Farma</a>
+    <div class="navbar-nav">
+      <a href="./index.html" class="a" id="aHome"><i data-feather="home"></i></a>
+      <a href="#" class="a" id="aMenu" class="menu-nav">
+        <i data-feather="menu"></i>
+      </a>
+    </div>
+  </nav>
+
+  <section class="navbar-menu">
+    <div class="menu">
+      <a class="aArt" href="./art.html">ART page</a>
+      <a class="aAtk" href="./atk.html">ATK page</a>
+      <a class="history" href="./history.html">History</a>
+      <a class="history" href="./index.html">Home</a>
+      <!-- <a class="history" href="/login">Cancel</a> -->
+    </div>
+  </section>
+  <div class="container">
+
+
+    <div class="nav">
+      <a href="#" id="t-stok-i">Stok Items</a>
+      <a href="#" id="tTakeI">Take Items</a>
+      <a href="#" id="tReceiveI">Receive Items</a>
+      <a href="#" id="tAddI">Add Items</a>
+    </div>
+
+    <section class="form-container">
+      <!-- form take start -->
+      <div class="cont-take">
+        <div class="form-section take">
+          <h1>FORM AMBIL BARANG</h1>
+          <form action="/art/take" method="post">
+            <table class="tablePopUp">
+              <thead>
+                <tr>
+                  <th scope="col">Item Code</th>
+                  <th scope="col">Item Name</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="text" name="takeArt" placeholder="Scan di sini..." id="scanItem"></td>
+                  <td></td>
+                  <td><input class="inputTotalTakeArt" type="number" name="totalTakeArt"></td>
+                </tr>
+        </div>
+        </table>
+        <button type="submit" class="form-button">Take</button>
+        </form>
+      </div>
+  </div>
+  <!-- form take end -->
+
+  <!-- form receive start -->
+  <div class="form-section receive">
+    <h1>FORM BARANG MASUK</h1>
+    <form action="/art/receive" method="post">
+      <table class="tablePopUp">
+        <thead>
+          <tr>
+            <th scope="col">Item Code</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" name="receiveArt" placeholder="Scan di sini..." id="searcing-item"></td>
+            <td></td>
+            <td><input class="inputTotalReceive" type="number" name="totalReceiveArt"></td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="breceive" type="submit" class="form-button">Receive</button>
+    </form>
+  </div>
+  <!-- form receive end -->
+
+  <!-- tambah barang start -->
+  <div class="form-section add">
+    <h1>INPUT BARANG BARU</h1>
+    <form action="/art/add" method="post">
+      <table class="tablePopUp">
+        <thead>
+          <tr>
+            <th scope="col">Item Code</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Jumlah</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" class="form-input-name" name="itemCodeArt"></td>
+            <td><input type="text" class="form-input-name" name="itemNameArt"></td>
+            <td><input type="number" class="form-input-name" name="totalArt"></td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="submit" id="bAdd" class="form-button">Submit</button>
+    </form>
+  </div>
+  <!-- tambah barang end -->
+  </section>
+
+  <!-- tampilkan semua barang start -->
+  <section class="body">
+    <div class="cont-table">
+      <table class="table">
+        <h1>STOK BARANG ART</h1>
+        <thead>
+          <tr>
+            <th scope="col">NO.</th>
+            <th scope="col">Item Code</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">
+              1
+            </th>
+            <td id="itemCode">
+              art-2100
+            </td>
+            <td id="itemName">
+              buku
+            </td>
+            <td id="itemTotal">
+              100
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="/public/script/art.js"></script>
+  </div>
+</body>
+
+<script src="/public/script/main.js"></script>
+<script>
+  feather.replace();
+</script>
+
+</html>
