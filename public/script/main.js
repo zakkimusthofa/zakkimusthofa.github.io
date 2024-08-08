@@ -7,7 +7,7 @@ humberger.addEventListener('click', (e) => {
 })
 
 document.addEventListener('click', (e) => {
-    if(!humberger.contains(e.target) && !menu.contains(e.target)){
+    if (!humberger.contains(e.target) && !menu.contains(e.target)) {
         menu.classList.remove('activeT');
     }
 })
